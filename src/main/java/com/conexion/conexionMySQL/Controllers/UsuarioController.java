@@ -40,5 +40,9 @@ public class UsuarioController {
         return usuarioService.getUserId(id);
     }
 
+    @GetMapping("despedida")
+    public String despedida(){
+        return "adios";
+    }
 }
 
