@@ -49,5 +49,10 @@ public class UsuarioController {
     public String despedida(){
         return "adios";
     }
+
+    @GetMapping("ByeWord")
+    public String ByWord(){
+        return "Bye Word";
+    }
 }
 
