@@ -40,6 +40,11 @@ public class UsuarioController {
         return idUsuario;
     }
 
+    @GetMapping("hiWord")
+    public String hiWorld(){
+        return "Hello Word";
+    }
+
     @GetMapping("getUser/{id}")
     public Optional<Usuario> getUserId(@PathVariable Long id){
         return usuarioService.getUserId(id);
