@@ -23,6 +23,11 @@ public class UsuarioController {
         return usuarioService.listarUsuarios();
     }
 
+    @PostMapping("saludo")
+    public String function saludo(){
+        return "Hello";
+    } 
+    
     @PostMapping("crear")
     public Usuario crearUsuario(@RequestBody Usuario newUsuario) {
         return usuarioService.guardarUsuario(newUsuario);
