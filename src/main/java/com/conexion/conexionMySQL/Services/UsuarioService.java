@@ -6,6 +6,7 @@ import com.conexion.conexionMySQL.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioService {
@@ -27,6 +28,10 @@ public class UsuarioService {
     public Long deleteUsuario(Long idUsuario){
         usuarioRepository.deleteById(idUsuario);
         return idUsuario;
+    }
+
+    public Optional<Usuario> getUserId(Long id){
+        return usuarioRepository.findById(id);
     }
 
 }

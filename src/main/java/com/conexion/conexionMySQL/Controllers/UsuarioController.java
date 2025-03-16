@@ -6,6 +6,7 @@ import com.conexion.conexionMySQL.Services.UsuarioService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -32,6 +33,11 @@ public class UsuarioController {
     public Long deleteUsuario(@PathVariable Long idUsuario){
         usuarioService.deleteUsuario(idUsuario);
         return idUsuario;
+    }
+
+    @GetMapping("getUser/{id}")
+    public Optional<Usuario> getUserId(@PathVariable Long id){
+        return usuarioService.getUserId(id);
     }
 
 }
