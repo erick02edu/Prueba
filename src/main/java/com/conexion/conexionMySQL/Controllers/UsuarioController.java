@@ -59,5 +59,10 @@ public class UsuarioController {
     public String ByWord(){
         return "Bye Word";
     }
+
+    @GetMapping("sumar")
+    public int sumar(@PathVariable int num){
+        return num+5;
+    }
 }
 
