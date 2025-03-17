@@ -59,5 +59,10 @@ public class UsuarioController {
     public String ByWord(){
         return "Bye Word";
     }
+
+    @GetMapping("restar/{num}")
+    public int Restar(@PathVariable int num){
+        return num+5;
+    }
 }
 
