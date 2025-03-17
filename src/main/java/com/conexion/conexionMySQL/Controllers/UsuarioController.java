@@ -64,5 +64,9 @@ public class UsuarioController {
     public int Restar(@PathVariable int num){
         return num+5;
     }
+    @GetMapping("sumar{num}")
+    public int sumar(@PathVariable int num){
+        return num+5;
+    }
 }
 
